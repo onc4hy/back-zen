@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">后禅</string>
+    <string name="title_section1">静心实修</string>
+    <string name="title_section2">读经阁</string>
+    <string name="title_section3">实修数据分析</string>
+    <string name="action_settings">设置</string>
+
+</resources>
