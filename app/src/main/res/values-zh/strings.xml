@@ -2,9 +2,11 @@
 <resources>
 
     <string name="app_name">后禅</string>
-    <string name="title_section1">禅堂静心</string>
-    <string name="title_section2">读经阁</string>
-    <string name="title_section3">实修分析</string>
+    <string name="title_section_meditation">禅堂静心</string>
+    <string name="title_section_depository">读经阁</string>
+    <string name="title_section_stats">实修分析</string>
+    <string name="action_search">搜索</string>
+    <string name="action_share">分享</string>
     <string name="action_settings">设置</string>
 
 </resources>

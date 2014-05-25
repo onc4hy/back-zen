@@ -20,15 +20,15 @@ public class StatsFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public static MeditationFragment newInstance(String param1, String param2) {
-        MeditationFragment fragment = new MeditationFragment();
+    public static StatsFragment newInstance(String param1, String param2) {
+        StatsFragment fragment = new StatsFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
     }
-    public MeditationFragment() {
+    public StatsFragment() {
     }
 
     @Override
