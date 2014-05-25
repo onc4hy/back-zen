@@ -14,21 +14,20 @@ public class DepositoryFragment extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
 
-    public static MeditationFragment newInstance(String param1, String param2) {
-        MeditationFragment fragment = new MeditationFragment();
+    public static DepositoryFragment newInstance(String param1, String param2) {
+        DepositoryFragment fragment = new DepositoryFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
     }
-    public MeditationFragment() {
+    public DepositoryFragment() {
     }
 
     @Override

@@ -6,47 +6,47 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 import com.houyalab.android.backzen.ui.DepositoryFragment;
 import com.houyalab.android.backzen.ui.MeditationFragment;
-import com.houyalab.android.backzen.ui.PlaceholderFragment;
+import com.houyalab.android.backzen.ui.StatsFragment;
 
+import java.util.ArrayList;
 import java.util.Locale;
 
 public class SectionsPagerAdapter extends FragmentPagerAdapter {
+    public ArrayList<Fragment> fragmentList;
 
     public SectionsPagerAdapter(FragmentManager fm) {
         super(fm);
+        fragmentList = new ArrayList<Fragment>();
+        fragmentList.add(new MeditationFragment());
+        fragmentList.add(new DepositoryFragment());
+        fragmentList.add(new StatsFragment());
     }
 
     @Override
     public Fragment getItem(int position) {
-        switch (position) {
-            case 0:
-                return MeditationFragment.newInstance("","");
-//                return getString(R.string.title_section1).toUpperCase(l);
-            case 1:
-                return DepositoryFragment.newInstance("","");
-//                return getString(R.string.title_section2).toUpperCase(l);
-            case 2:
-                return StatsFragment.newInstance("","");
-//                return getString(R.string.title_section3).toUpperCase(l);
+        Fragment fragment = null;
+        if (position < fragmentList.size()) {
+            fragment = fragmentList.get(position);
         }
-//        return PlaceholderFragment.newInstance(position + 1);
+        return fragment;
     }
 
     @Override
     public int getCount() {
-        return 3;
+        return fragmentList.size();
     }
 
     @Override
     public CharSequence getPageTitle(int position) {
+        //return getItem(position).getTitle();
         Locale l = Locale.getDefault();
         switch (position) {
             case 0:
-//                return getString(R.string.title_section1).toUpperCase(l);
+                return "title_section_meditation".toUpperCase(l);
             case 1:
-//                return getString(R.string.title_section2).toUpperCase(l);
+                return "title_section_depository".toUpperCase(l);
             case 2:
-//                return getString(R.string.title_section3).toUpperCase(l);
+                return "title_section_stats".toUpperCase(l);
         }
         return null;
     }
